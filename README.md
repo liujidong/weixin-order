@@ -19,12 +19,16 @@
 
 - 下载项目
 
-        git clone https://github.com/EwingYangs/weixin-order
-        
+        git clone https://github.com/xxx
+- 环境配置
+        切换到php5.6.27+nginx
+        开启openssl
+        修改并执行D:\phpStudy\PHPTutorial\tools\composer\composer.bat      
 - composer 安装yii库
 
         cd weixin-order
-        composer install
+        //composer install
+        D:\phpStudy\PHPTutorial\tools\composer\composer.bat install
         
 - nginx 配置，看根目录的nginx.conf文件
 
@@ -42,8 +46,8 @@
                 'charset' => 'utf8',
             ];
         
-- 点餐地址（前端） www.order.com
-- 后台地址（后台） www.order.com/site/index 账号密码为ppoo/123456
+- 点餐地址（前端） localhost(www.order.com)
+- 后台地址（后台） localhost(www.order.com)/site/index 账号密码为ppoo/123456
 
 # 其他
 
