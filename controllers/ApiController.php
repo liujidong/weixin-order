@@ -7,6 +7,11 @@ use app\models\Menu;
 use app\models\Info;
 
 class ApiController extends Controller{
+    /*
+    public function beforeAction($action)
+    {
+       return Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+    }*/
 
     /**
      * [获取类型的接口]
@@ -14,9 +19,10 @@ class ApiController extends Controller{
      * @DateTime  2017-02-12T09:59:35+0800
      * @return    [type]   jsonp                [description]
      */
-	 public function actionGetType(){
+    public function actionGetType(){
         $typeData = MenuType:: find()->where(['is_delete' => 0])->asArray()->all();
         echo json_encode($typeData);
+	exit();
      }
 
      /**
@@ -29,6 +35,7 @@ class ApiController extends Controller{
         $type_id = Yii::$app->request->get('type_id');
         $menuData = Menu::find()->where(['menu_type' => $type_id])->asArray()->all();
         echo json_encode($menuData);
+	exit();
      }
 
      /**
@@ -52,6 +59,7 @@ class ApiController extends Controller{
         $room_id = Yii::$app->request->get('room_id');
         $table_number = Info::find()->select('table_number')->where(['room_id' => $room_id])->asArray()->one();
         echo json_encode($table_number['table_number']);
+        exit();
      }
 }
 
