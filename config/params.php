@@ -3,7 +3,7 @@
 return [
     'adminEmail' => 'admin@example.com',
     // 'uploadPath' => '',
-    'web_url' => 'http://'.$_SERVER['SERVER_NAME'].'/',
-    'js_url' => 'http://'.$_SERVER['SERVER_NAME'].'/js/',
-    'css_url' => 'http://'.$_SERVER['SERVER_NAME'].'/css/',
+    'web_url' => '../../',
+    'js_url' => '../../js/',
+    'css_url' => '../../css/'
 ];

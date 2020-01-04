@@ -47,7 +47,7 @@ $this->registerCssFile(Yii::$app->params['css_url'].'fileinput.css');
                                     <td><?=$v['type_name']?></td>
                                     <td><?=$v['price']?></td>
                                     <td><?=$v['menu_number']?></td>
-                                    <td><img src="<?="../../".$v['menu_logo']?>" width="80"></td>
+                                    <td><img src="<?=Yii::$app->params['web_url'].$v['menu_logo']?>" width="80"></td>
                                     <td><?=date('Y-m-d H:i',$v['create_at'])?></td>
                                     <td><a style="cursor: pointer;" data-target="#myModal1" data-toggle="modal" onclick="$('#deleteType').attr('typeid',<?=$v['id']?>)">删除</a> | <a style="cursor: pointer;" data-target="#myModal2" data-toggle="modal" onclick="$('#menu_name_edit').val('<?=$v['menu_name']?>');$('#editType').attr('typeid',<?=$v['id']?>);$('#menu_price').val('<?=$v['price']?>');$('#number').val('<?=$v['menu_number']?>');$('#menu_type option').removeAttr('selected');$('#menu_type option[value=<?=$v['menu_type']?>]').attr('selected',true);$('#image').attr('src','<?=Yii::$app->params['web_url'].$v['menu_logo']?>');$('#edit_id').val('<?=$v['id']?>')">编辑</a></td>
                                 </tr>
