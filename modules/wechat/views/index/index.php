@@ -31,15 +31,18 @@ use app\models\Order;
 		    </div>
 		</div>
 		<div class="fix-bot">
-			   	  <a href="" class="list-js">合计：<i><span id="money">0<span>元</i><em>(<span id="number">0</span>份)</em></a>
+			   	  <a href="" class="list-js">合计：<i><span id="money">0</span>元</i><em>(<span id="number">0</span>份)</em></a>
 			   	  <a href="javascript:void(0)" id="affirm" class="list-jsk">立即下单</a>
 		</div>
 	</div>
 	<div class="am-hide tabslist list-tabs" id="div_user">
-		    	<img style="padding:10px" class="am-circle" src="<?=isset($userInfo->headimgurl) ? $userInfo->headimgurl : 'http://img3.imgtn.bdimg.com/it/u=275622820,2944364039&fm=21&gp=0.jpg'?>" width="80" height="80"/>
+                <?php if (isset($userInfo->headimgurl)):?>
+		    	<img style="padding:10px" class="am-circle" src="<?=$userInfo->headimgurl?>" width="80" height="80"/>
+                <?php else:?>
+                    <img style="padding:10px" class="am-circle" src="static/wechat/images/u.jpg" width="80" height="80"/>
+                <?php endif?>
 		    	&nbsp;&nbsp;&nbsp;<?=isset($userInfo->nickname) ? $userInfo->nickname : '未登录'?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		    	<span style="color:gray">所在城市：<?=isset($userInfo->city) ? $userInfo->city : '未知'?><span>
-		    </ul>
+		    	<span style="color:gray">所在城市：<?=isset($userInfo->city) ? $userInfo->city : '未知'?></span>
 		    <div class="juli"></div>
 		    <ul class="list-detail">
 		    	<li class="time">

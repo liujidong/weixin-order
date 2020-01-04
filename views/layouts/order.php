@@ -19,7 +19,7 @@ AppAsset :: register($this);//注册
 
 <body>
     <?php $this->beginBody() ?>
-    <?//= Alert::widget() ?>
+    <?php //= Alert::widget() ?>
 <?php
 $alert = false;
 if( Yii::$app->getSession()->hasFlash('success') ) {
